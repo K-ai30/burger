@@ -1,21 +1,29 @@
 const orm = require("./config/orm.js");
 
-// Dependencies
-const express = require("express");
-const exphbs = require("express-handlebars");
+let burger = {
+    all:  function(cb) {
+        orm.all("burgers", function(res) {
+            cb(res);
+        });
+    },
 
-// Create an instance of the express app.
-const app = express();
+    create: function(cols, vals, cb) {
+        orm.create("burgers", cols, vals, function(res) {
+            cb(res);
+        });
+    },
 
-// Set the port of our application
-// process.env.PORT lets the port be set by Heroku
-const PORT = process.env.PORT || 8000;
+    update: function(objColVals, condition, cb) {
+        orm.create("burgers", objColVals, condition, function(res) {
+            cb(res);
+        });
+    },
 
-// Set Handlebars as the default templating engine.
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
-let burgers = [];
-
+    delete: function(condition, cb) {
+        orm.delete("burgers", condition, function(res) {
+            cb(res);
+        });
+    },
+};
 
 module.exports = burgers;
