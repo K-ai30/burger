@@ -15,6 +15,12 @@ const PORT = process.env.PORT || 8000;
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// Import routes
+let router = require("./controllers/burgers_controller.js");
+
+app.use(router);
+app.use(express.static("public"));
+
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, () => {

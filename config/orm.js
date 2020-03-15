@@ -1,18 +1,18 @@
 const connection = require("./connection.js");
 
-// const orm = {
-//     selectAll()
+const orm = {
+   
 
-//     // insertOne()
-
-//     // updateOne()
-
-// }
+}
 
 
 
 
+// selectAll()
 
+// insertOne()
+
+// updateOne()
 
 
 
