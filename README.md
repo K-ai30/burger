@@ -13,7 +13,7 @@ Clone to your local machine and open in your favorite code editor to check it ou
 
 ### Link
 
-
+[https://quiet-savannah-02071.herokuapp.com/](https://quiet-savannah-02071.herokuapp.com/)
 
 ### Technologies Utilized:
 
@@ -28,7 +28,7 @@ Clone to your local machine and open in your favorite code editor to check it ou
 
 ### Demo
 
-[https://quiet-savannah-02071.herokuapp.com/](https://quiet-savannah-02071.herokuapp.com/)
+
 
 ### Notes
 
