@@ -1,38 +1,69 @@
-<link>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <script src="https://kit.fontawesome.com/5599b5ab1b.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
 
 <div class="container">
 
-<div class="jumbotron">
+<div class="card jumbotron">
     <h1>Eat-Da-Burger!</h1>
-    <img src="/assets/images/stockBurger.jpg">
+    {{!-- <img src="/assets/images/stockBurger.jpg"> --}}
 </div>
 
-<h2>PREPARED</h2>
- <ul>
+<form id="burgerBar" class="card col-md-12 form-inline" action="/addBurger" method="POST">
+    <div class="form-group">
+        <input name="burgerName" type="text" class="form-control" id="exampleInputBurger1" aria-describedby="burgerHelp" placeholder="Add Burger">
+        <button type="submit" class="btn btn-success">Add Burger!</button>
+    </div>
+</form>
+
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+ <ul class="burgerList">
+    <h2>PREPARED</h2>
     {{#each burgers}}
         {{#unless devoured}}
-            <h3>{{name}}</h3>
+        <li><h3>{{burger_name}}</h3>
+            <form action="/devourBurger" method="POST">
+            <input name="burgerID" type="hidden" value="{{id}}">
+            <button id="devour" class="btn btn-success"><i class="fas fa-hamburger"></i> Devour it!</button>
+            </form>
+        </li> 
         {{/unless}}
     {{/each}}
  </ul>
-
-
-<h2>DEVOURED</h2>
-<ul>
-    {{#each burgers}}
-        {{#unless prepared}}
-            <h3>{{name}}</h3>
-        {{/unless}}
-    {{/each}}
- </ul>
-
-
+</div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div class="col-md-6">
+<div class="card">
+<ul class="burgerList">
+    <h2>DEVOURED</h2>
+    {{#each burgers}}
+        {{#if devoured}}
+            <li><h3>{{burger_name}}</h3>
+        </li> 
+        {{/if}}
+    {{/each}}
+ </ul>
+</div>
+</div>
+</div>
+
+</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-    <script src="../public/js/burger.js"></script>
   </body>
 </html>
