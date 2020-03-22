@@ -1,3 +1,93 @@
+html, body {
+    background-image: url("/assets/images/tableview.jpg");
+}
+
+/* Header */
+.jumbotron{
+    background-image: url("/assets/images/stockBurger.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 387px;
+    margin-bottom: 0;
+    border: 2px solid cadetblue;
+    color: white;
+    font-size: 40pt;
+}
+
 h1 {
     text-align: center;
+    margin: 150px 150px 150px 150px;
+}
+
+/* Add Burger Form */
+form {
+    background-color: lightgrey;
+    padding: 10px;
+}
+
+#burgerBar {
+    border: 2px solid cadetblue;
+}
+
+#burgerBar input {
+    width: 1000px;
+}
+
+/* Burger Cards */
+.card {
+    background-color: lightgrey;
+    float: left;
+    margin-right: 10px;
+    padding: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    min-width: 100%;
+    border: 2px solid cadetblue;
+}
+
+h2 {
+    text-align: center;
+    background-color: cadetblue;
+    padding: 5px;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+}
+
+.burgerList h3, .burgerList button {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.burgerList li {
+    list-style: none;
+}
+
+.burgerList form {
+    display: inline;
+    background-color: beige;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+ padding: 5px;
+ margin-bottom: 10px;
+ border-radius: 8px;
+ background-color: beige;
+ text-align: center;
+}
+
+#devour {
+    float: right;
+}
+
+.container {
+    padding: 20px;
 }
