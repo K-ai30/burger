@@ -1,9 +1,12 @@
 // Dependencies
 const express = require("express");
 const exphbs = require("express-handlebars");
+const parser = require("body-parser");
 
 // Create an instance of the express app.
 const app = express();
+
+app.use(parser.urlencoded({ extended: true })); 
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -20,7 +23,6 @@ let router = require("./controllers/burgers_controller.js");
 
 app.use(router);
 app.use(express.static("public"));
-
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, () => {
