@@ -28,7 +28,7 @@ Clone to your local machine and open in your favorite code editor to check it ou
 
 ### Demo
 
-![](/assets/images/BurgerDemo.gif)
+![](/images/burgerdemo.gif)
 
 ### Notes
 
