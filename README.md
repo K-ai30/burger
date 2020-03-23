@@ -28,7 +28,7 @@ Clone to your local machine and open in your favorite code editor to check it ou
 
 ### Demo
 
-![](https://github.com/K-ai30/burger/blob/master/public/assets/images/BurgerDemo.gif)
+![]()
 
 ### Notes
 
